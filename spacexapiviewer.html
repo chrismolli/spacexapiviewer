@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+	
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" id="theme" href="light_theme.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>SpaceX API Viewer</title>
+  </head>
+  
+  <body>
+	  
+	<!-- Header -->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-9 align-self-center">
+				<br>
+				<h1 align="center">SpaceX API</h1>
+				<h3 align="center" class="font-weight-light">Viewer</h3>
+			</div>
+			<div class="col-3 align-self-center" align="center">
+				<div><i class="fa fa-adjust"></i></div>
+				<label class="switch">
+					  <input type="checkbox" id="theme_toggle" onclick="toggleTheme()">
+					  <span class="slider round"></span>
+		  		</label>
+			</div>
+		</div>
+	</div>
+	
+    <hr>
+    
+    <!-- Content -->
+    <div class="container-fluid">
+	    <div class="row">
+		    <div class="col">
+			    <div class="row">
+				    <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+					    <!-- History Plot -->
+					    <h3 align="center">Launch History</h3>
+					    <canvas id="launch_history"></canvas>
+				    </div>
+			    </div>
+			    <hr>
+		    </div>
+	    </div>
+	    <div class="row">
+		     <!-- Info Boxes -->
+		     <div class="col-sm-12 col-md-12 col-lg-6 vertical-divider">
+			    <h3 align="center">Latest Launch</h3>
+			    <div class="row">
+				    <div class="col"><i class="fa fa-inline fa-hashtag"></i><p id="l_flight_number"></p></div>
+				    <div class="col"><span class="font-weight-bold">Mission </span><p id="l_mission_name"></p></div>
+				    <div class="col"><span class="font-weight-bold">ID </span><p id="l_mission_id"></p></div>
+			    </div>
+			    <div class="row">
+				    <div class="col-4"><span class="font-weight-bold">Launch Date </span><p id="l_launch_date"></p></div>
+				    <div class="col-8"><span class="font-weight-bold">Launch Site </span><p id="l_launch_site"></p></div>
+			    </div>
+			    <div class="row">
+				    <div class="col"><span class="font-weight-bold">Details </span><p id="l_details"></p></div>
+			    </div>
+			    <hr class="d-lg-none">
+		     </div>
+		     <div class="col-sm-12 col-md-12 col-lg-6">
+			    <h3 align="center">Next Launch</h3>
+			    <div class="row">
+				    <div class="col"><i class="fa fa-inline fa-hashtag"></i><p id="n_flight_number"></p></div>
+				    <div class="col"><span class="font-weight-bold">Mission </span><p id="n_mission_name"></p></div>
+				    <div class="col"><span class="font-weight-bold">ID </span><p id="n_mission_id"></p></div>
+			    </div>
+			    <div class="row">
+				    <div class="col-4"><span class="font-weight-bold">Launch Date </span><p id="n_launch_date"></p></div>
+				    <div class="col-8"><span class="font-weight-bold">Launch Site </span><p id="n_launch_site"></p></div>
+			    </div>
+			    <div class="row">
+				    <div class="col"><span class="font-weight-bold">Details </span><p id="n_details"></p></div>
+			    </div>
+			    <hr class="d-lg-none">
+		     </div>
+	    </div>
+    </div>
+    
+    <!-- Optional JavaScript -->
+    <script src="https://github.com/chartjs/Chart.js/releases/download/v2.9.3/Chart.min.js"></script>
+    <script src="spacex.js"></script>
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+  
+</html>
